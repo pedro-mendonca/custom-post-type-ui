@@ -121,11 +121,12 @@ function cptui_manage_post_types() {
 		 * @param string $value Current post type selected.
 		 */
 		do_action( 'cptui_below_post_type_select', $current['name'] );
+	} else {
+
 	} ?>
 
 	<form method="post">
 		<table class="form-table cptui-table">
-			<tr>
 
 						<?php
 
@@ -205,10 +206,10 @@ function cptui_manage_post_types() {
 
 
 
-				<div>
+					<td>
 					<h2><?php _e( 'Labels', 'custom-post-type-ui' ); ?></h2>
-						<div>
-							<table>
+					</td>
+
 							<?php
 							/*
 							 * Post Admin Menu Name
@@ -456,13 +457,11 @@ function cptui_manage_post_types() {
 								'aftertext' => __( '(e.g. Movies list)', 'custom-post-type-ui' )
 							) );
 							?>
-							</table>
-						</div>
 
-					<h2><?php _e( 'Settings', 'custom-post-type-ui' ); ?></h2>
 
-						<div>
-							<table>
+					<td><h2><?php _e( 'Settings', 'custom-post-type-ui' ); ?></h2></td>
+
+
 							<?php
 							/*
 							 * Public Boolean
@@ -1024,11 +1023,6 @@ function cptui_manage_post_types() {
 							}
 
 							echo $ui->get_fieldset_end() . $ui->get_td_end() . $ui->get_tr_end(); ?>
-							</table>
-						</div>
-				</div>
-				</td>
-			</tr>
 		</table>
 		<p class="submit">
 			<?php wp_nonce_field( 'cptui_addedit_post_type_nonce_action', 'cptui_addedit_post_type_nonce_field' );
