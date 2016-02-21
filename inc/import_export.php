@@ -386,6 +386,8 @@ function cptui_import_types_taxes_settings( $postdata = array() ) {
 
 			$success = update_option( 'cptui_post_types', $settings );
 		}
+		// Used to help flush rewrite rules on init.
+		set_transient( 'cptui_flush_rewrite_rules', 'true', 5 * 60 );
 		return cptui_admin_notices( 'import', __( 'Post types', 'custom-post-type-ui' ), $success );
 
   	} elseif ( !empty( $postdata['cptui_tax_import'] ) ) {
@@ -407,10 +409,10 @@ function cptui_import_types_taxes_settings( $postdata = array() ) {
 
 			$success = update_option( 'cptui_taxonomies', $settings );
 		}
+		// Used to help flush rewrite rules on init.
+		set_transient( 'cptui_flush_rewrite_rules', 'true', 5 * 60 );
 		return cptui_admin_notices( 'import', __( 'Taxonomies', 'custom-post-type-ui' ), $success );
   	}
-
-	flush_rewrite_rules();
 
 	return $success;
 }
