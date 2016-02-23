@@ -901,7 +901,6 @@ function cptui_manage_post_types() {
 				?>
 			</table>
 		</div>
-
 		<p class="submit">
 			<?php wp_nonce_field( 'cptui_addedit_post_type_nonce_action', 'cptui_addedit_post_type_nonce_field' );
 			if ( ! empty( $_GET ) && ! empty( $_GET['action'] ) && 'edit' == $_GET['action'] ) { ?>

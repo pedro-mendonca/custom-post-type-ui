@@ -612,9 +612,9 @@ function cptui_convert_settings() {
 	if ( false === get_option( 'cptui_taxonomies' ) && ( $taxonomies = get_option( 'cpt_custom_tax_types' ) ) ) {
 
 		$new_taxonomies = array();
-		foreach ( $taxonomies as $tax ) {
+		foreach( $taxonomies as $tax ) {
             $new_taxonomies[ $tax['name'] ]                 = $tax;    // Yep, still our friend.
-            $new_taxonomies[ $tax['name'] ]['labels']       = $tax[0]; // Taxonomies are the only thing with
+            $new_taxonomies[ $tax['name'] ]['labels']       = $tax[0]; // Taxonomies are the only thing with.
             $new_taxonomies[ $tax['name'] ]['object_types'] = $tax[1]; // "tax" in the name that I like.
 			unset(
 				$new_taxonomies[ $tax['name'] ][0],
