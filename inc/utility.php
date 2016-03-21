@@ -40,8 +40,6 @@ add_filter( 'plugin_action_links_' . plugin_basename( dirname( dirname( __FILE__
  *
  * @since 1.2.0
  *
- * @internal
- *
  * @return string
  */
 function cptui_menu_icon() {
@@ -122,94 +120,6 @@ function cptui_footer( $original = '' ) {
 	);
 }
 add_filter( 'admin_footer_text', 'cptui_footer' );
-
-/**
- * Output starter notes for Add New Post Type and Add New Taxonomy screens.
- *
- * @since 1.3.0
- *
- * @internal
- *
- * @param string $tab         Current tab being displayed.
- * @param string $object_type Whether a post type or taxonomy.
- * @return string
- */
-function cptui_starter_notes( $tab = '', $object_type = '' ) {
-	$output = '';
-	if ( 'new' === $tab ) {
-
-		if ( ! empty( $object_type ) ) {
-			$object_type = '_' . $object_type;
-		}
-
-		/**
-		 * Filters the starter notes to output to screen.
-		 *
-		 * This is a dynamic filter that's dependent on the object type passed in.
-		 *
-		 * Only add the text meant for the list item. We will handle the html. Potential
-		 * filters incude `cptui_starter_notes`, `cptui_starter_notes_post_types` and
-		 * `cptui_starter_notes_taxonomies`.
-		 *
-		 * @since 1.3.0
-		 *
-		 * @param array $value Array of notes to iterate over.
-		 */
-		$notes = apply_filters( "cptui_starter_notes{$object_type}", array() );
-		if ( ! empty( $notes ) && is_array( $notes ) ) {
-			$output .= '<h2>' . __( 'Starter Notes', 'custom-post-type-ui' ) . '</h2>';
-			$output .= '<div><ol>';
-			foreach ( $notes as $note ) {
-				$output .= '<li>' . $note . '</li>';
-			}
-			$output .= '</ol></div>';
-		}
-	}
-	return $output;
-}
-
-/**
- * Add our starter notes for post types.
- *
- * @since 1.3.0
- *
- * @internal
- *
- * @param array $notes Array of notes to add.
- * @return array Array of notes added.
- */
-function cptui_post_type_starter_notes( $notes = array() ) {
-	$notes[] = sprintf( esc_html__( 'Slugs should only contain alphanumeric, latin characters. Underscores or dashes should be used in place of spaces. Reserved WordPress core slugs: post, page, attachment, revision, nav_menu_item.', 'custom-post-type-ui' ), '<strong class="wp-ui-highlight">', '</strong>' );
-
-	$notes[] = sprintf( esc_html__( 'If you are unfamiliar with the advanced post type settings, just fill in the %sPost Type Name%s and %sLabel%s fields. Remaining settings will use default values. Labels, if left blank, will be automatically created based on the post type name. Hover over the question mark for more details.', 'custom-post-type-ui' ), '<strong class="wp-ui-highlight">', '</strong>', '<strong class="wp-ui-highlight">', '</strong>' );
-
-	$notes[] = sprintf( esc_html__( 'Deleting custom post types will %sNOT%s delete any content into the database or added to those post types. You can easily recreate your post types and the content will still exist.', 'custom-post-type-ui' ), '<strong class="wp-ui-highlight">', '</strong>' );
-
-	return $notes;
-}
-add_filter( 'cptui_starter_notes_post_types', 'cptui_post_type_starter_notes' );
-
-/**
- * Add our starter notes for taxonomies.
- *
- * @since 1.3.0
- *
- * @internal
- *
- * @param array $notes Array of notes to add.
- * @return array Array of notes added.
- */
-function cptui_taxonomy_starter_notes( $notes = array() ) {
-	$notes[] = sprintf( esc_html__( 'Taxonomy names should have %smax 32 characters%s, and only contain alphanumeric, lowercase, latin characters. Underscores will automatically replace spaces and accented letters will be converted to non-accents.', 'custom-post-type-ui' ), '
-<strong class="wp-ui-highlight">', '</strong>' );
-
-	$notes[] = sprintf( esc_html__( 'If you are unfamiliar with the advanced taxonomy settings, just fill in the %sTaxonomy Name%s and choose an %sAttach to Post Type%s option. Remaining settings will use default values. Labels, if left blank, will be automatically created based on the taxonomy name. Hover over the question marks for more details.', 'custom-post-type-ui' ), '<strong class="wp-ui-highlight">', '</strong>', '<strong class="wp-ui-highlight">', '</strong>' );
-
-	$notes[] = sprintf( esc_html__( 'Deleting custom taxonomies do %sNOT%s delete terms added to those taxonomies. You can recreate your taxonomies and the terms will return. Changing the name, after adding terms to the taxonomy, will not update the terms in the database.', 'custom-post-type-ui' ), '<strong class="wp-ui-highlight">', '</strong>' );
-
-	return $notes;
-}
-add_filter( 'cptui_starter_notes_taxonomies', 'cptui_taxonomy_starter_notes' );
 
 /**
  * Conditionally flushes rewrite rules if we have reason to.
@@ -344,3 +254,31 @@ function cptui_get_post_type_data() {
 function cptui_get_taxonomy_data() {
 	return apply_filters( 'cptui_get_taxonomy_data', get_option( 'cptui_taxonomies', array() ), get_current_blog_id() );
 }
+
+/**
+ * Displays WebDevStudios products in a sidebar on the add/edit screens for post types and taxonomies.
+ *
+ * We hope you don't mind.
+ *
+ * @since 1.3.0
+ *
+ * @internal
+ */
+function cptui_products_sidebar() {
+	echo '<div class="wdspromos">';
+	printf(
+		'<a href="%s"><img src="%s" alt="%s"></a>',
+		'https://apppresser.com/?utm_source=pluginize&utm_medium=plugin&utm_campaign=cptui',
+		plugin_dir_url( dirname( __FILE__ ) ) . 'images/apppresser.png',
+		__( 'AppPresser product ad', 'custom-post-type-ui' )
+	);
+	printf(
+		'<a href="%s"><img src="%s" alt="%s"></a>',
+		'https://maintainn.com/?utm_source=Pluginize&utm_medium=Plugin-Sidebar&utm_campaign=CPTUI',
+		plugin_dir_url( dirname( __FILE__ ) ) . 'images/maintainn.png',
+		__( 'Maintainn product ad', 'custom-post-type-ui' )
+	);
+	echo '</div>';
+}
+add_action( 'cptui_below_post_type_tab_menu', 'cptui_products_sidebar' );
+add_action( 'cptui_below_taxonomy_tab_menu', 'cptui_products_sidebar' );

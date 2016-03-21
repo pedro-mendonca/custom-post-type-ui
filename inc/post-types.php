@@ -1519,7 +1519,7 @@ function cptui_convert_post_type_posts( $original_slug = '', $new_slug = '' ) {
  * @param string $post_type_slug The post type slug being saved.
  * @param array  $post_types     Array of CPTUI-registered post types.
  *
-*@return bool
+ * @return bool
  */
 function cptui_check_existing_post_type_slugs( $slug_exists = false, $post_type_slug = '', $post_types = array() ) {
 

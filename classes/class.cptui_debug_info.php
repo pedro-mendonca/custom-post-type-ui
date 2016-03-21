@@ -209,8 +209,9 @@ class CPTUI_Debug_Info {
 	/**
 	 * Sends an email to the specified address, with the system status as the message.
 	 *
-	 * @param array $args Array of arguments for the method.
+	 * @since 1.2.0
 	 *
+	 * @param array $args Array of arguments for the method.
 	 * @return bool
 	 */
 	public function send_email( $args = array() ) {

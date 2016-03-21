@@ -191,7 +191,9 @@ class cptui_admin_ui {
 	}
 
 	/**
-	 * Return an aria-required attribute set to true
+	 * Return an aria-required attribute set to true.
+	 *
+	 * @since 1.3.0
 	 *
 	 * @param bool $required Whether or not the field is required.
 	 * @return string Aria required attribute
@@ -252,6 +254,8 @@ class cptui_admin_ui {
 	/**
 	 * Return a placeholder HTML attribtue for a specified value.
 	 *
+	 * @since 1.3.0
+	 *
 	 * @param string $text Text to place in the placeholder attribute.
 	 * @return string $value Placeholder HTML attribute.
 	 */
@@ -261,6 +265,8 @@ class cptui_admin_ui {
 
 	/**
 	 * Return a span that will only be visible for screenreaders.
+	 *
+	 * @since 1.3.0
 	 *
 	 * @param string $text Text to visually hide.
 	 * @return string $value Visually hidden text meant for screen readers.

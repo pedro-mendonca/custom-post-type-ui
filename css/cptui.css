@@ -247,3 +247,12 @@ fieldset .cptui-help {
 	display: block;
 	margin-top: 25px;
 }
+.wdspromos {
+	float: right;
+	margin-left: 20px;
+	margin-top: 10px;
+	width: 275px;
+}
+.wdspromos img {
+	margin-bottom: 10px;
+}
