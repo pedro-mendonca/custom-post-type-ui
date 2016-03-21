@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Custom Post Type UI\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/plugins/custom-post-type-ui\n"
 "POT-Creation-Date: 2016-03-21 16:19+0000\n"
-"PO-Revision-Date: 2016-03-21 16:20+0000\n"
+"PO-Revision-Date: 2016-03-21 16:57+0000\n"
 "Last-Translator: Pedro Mendonça <ped.gaspar@gmail.com>\n"
 "Language-Team: WebDevStudios <contact@webdevstudios.com>\n"
 "Language: pt_PT\n"
@@ -752,7 +752,7 @@ msgstr "Adicionar novo item"
 #: inc/post-types.php:367
 msgid "Used at the top of the post editor screen for a new post type post."
 msgstr ""
-"Utilizado no topo da página de edição para um novo item do tipo de conteúdo."
+"Utilizado no topo da página de edição de um novo item do tipo de conteúdo."
 
 #: inc/post-types.php:371
 msgid "(e.g. Add New Movie)"
@@ -780,6 +780,8 @@ msgstr "Editar item"
 msgid ""
 "Used at the top of the post editor screen for an existing post type post."
 msgstr ""
+"Utilizado no topo da página de edição de um item existente do tipo de "
+"conteúdo."
 
 #: inc/post-types.php:389
 msgid "(e.g. Edit Movie)"
@@ -871,6 +873,7 @@ msgstr "Imagem de destaque"
 #: inc/post-types.php:457
 msgid "Used as the \"Featured Image\" phrase for the post type."
 msgstr ""
+"Utilizado como texto de \"Imagem de destaque\" para o tipo de conteúdo."
 
 #: inc/post-types.php:461
 msgid "(e.g. Featured image for this movie)"
@@ -883,6 +886,8 @@ msgstr "Definir imagem de destaque"
 #: inc/post-types.php:466
 msgid "Used as the \"Set featured image\" phrase for the post type."
 msgstr ""
+"Utilizado como texto de \"Definir imagem de destaque\" para o tipo de "
+"conteúdo."
 
 #: inc/post-types.php:470
 msgid "(e.g. Set featured image for this movie)"
@@ -895,6 +900,8 @@ msgstr "Remover imagem de destaque"
 #: inc/post-types.php:475
 msgid "Used as the \"Remove featured image\" phrase for the post type."
 msgstr ""
+"Utilizado como texto de \"Remover imagem de destaque\" para o tipo de "
+"conteúdo."
 
 #: inc/post-types.php:479
 msgid "(e.g. Remove featured image for this movie)"
@@ -907,14 +914,18 @@ msgstr "Utilizar imagem de destaque"
 #: inc/post-types.php:484
 msgid "Used as the \"Use as featured image\" phrase for the post type."
 msgstr ""
+"Utilizado como texto de \"Utilizar imagem de destaque\" para o tipo de "
+"conteúdo."
 
 #: inc/post-types.php:488
 msgid "(e.g. Use as featured image for this movie)"
 msgstr "(p. ex. Utilizar como imagem de destaque para este filme)"
 
 #: inc/post-types.php:493
+#, fuzzy
 msgid "Post type archive label used in nav menus."
 msgstr ""
+"Legenda do arquivo do tipo de conteúdo utilizada nos menus de navegação."
 
 #: inc/post-types.php:497
 msgid "(e.g. Movie archives)"
@@ -929,6 +940,8 @@ msgid ""
 "Used as the \"Insert into post\" or \"Insert into page\" phrase for the post "
 "type."
 msgstr ""
+"Utilizado como texto de \"Inserir no artigo\" ou \"Inserir na página\" para "
+"o tipo de conteúdo."
 
 #: inc/post-types.php:506
 msgid "(e.g. Insert into movie)"
@@ -943,6 +956,8 @@ msgid ""
 "Used as the \"Uploaded to this post\" or \"Uploaded to this page\" phrase "
 "for the post type."
 msgstr ""
+"Utilizado como texto de \"Carregado para este artigo\" ou \"Carregado para "
+"esta página\" para o tipo de conteúdo."
 
 #: inc/post-types.php:515
 msgid "(e.g. Uploaded to this movie)"
