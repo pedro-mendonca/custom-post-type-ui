@@ -101,4 +101,7 @@
 	$('#labels_expand legend,#settings_expand legend').on('click',function(e){
 		$(this).parent().toggleClass('toggledclosed');
 	});
+	$('.cptui-help').on('click',function(e){
+		e.preventDefault();
+	});
 })(jQuery);
