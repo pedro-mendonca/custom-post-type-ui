@@ -11,7 +11,6 @@ var rename = require('gulp-rename');
 var sass = require('gulp-sass');
 var sort = require('gulp-sort');
 var uglify = require('gulp-uglify');
-var wpPot = require('gulp-wp-pot');
 var shell = require('gulp-shell');
 
 //set assets paths.
@@ -123,32 +122,6 @@ gulp.task('uglify', ['clean:scripts'], function() {
 	.pipe(concat('cptui.min.js'))
 	.pipe(gulp.dest('js'))
 });
-/**
- * Delete the theme's .pot before we create a new one
- */
-gulp.task('clean:pot', function() {
-	return del(['languages/custom-post-type-ui-test.pot']);
-});
-
-/**
- * Scan the theme and create a POT file.
- *
- * https://www.npmjs.com/package/gulp-wp-pot
- */
-gulp.task('wp-pot', ['clean:pot'], function() {
-	return gulp.src(paths.php)
-	.pipe(plumber({ errorHandler: handleErrors }))
-	.pipe(sort())
-	.pipe(wpPot({
-		domain: 'custom-post-type-ui',
-		destFile:'custom-post-type-ui.pot',
-		package: 'Custom Post Type UI',
-		bugReport: 'https://wordpress.org/plugins/custom-post-type-ui',
-		lastTranslator: 'WebDevStudios <contact@webdevstudios.com>',
-		team: 'Team WDS<contact@webdevstudios.com>'
-	}))
-	.pipe(gulp.dest('languages/'));
-});
 
 /**
  * Process tasks and reload browsers on file changes.
@@ -165,7 +138,6 @@ gulp.task('watch', function () {
 /**
  * Create indivdual tasks.
  */
-gulp.task('i18n', ['wp-pot']);
 gulp.task('scripts', ['uglify']);
 gulp.task('styles', ['cssnano']);
 gulp.task('default', ['i18n', 'styles', 'scripts']);
