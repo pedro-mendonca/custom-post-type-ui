@@ -197,7 +197,7 @@ function cptui_manage_taxonomies() {
 		<div class="cptui-section">
 			<?php echo $ui->get_fieldset_start();
 				echo $ui->get_legend_start();
-				esc_html_e( 'Required fields', 'custom-post-type-ui' );
+				esc_html_e( 'Basic settings', 'custom-post-type-ui' );
 				echo $ui->get_legend_end();
 			?>
 			<table class="form-table cptui-table">
