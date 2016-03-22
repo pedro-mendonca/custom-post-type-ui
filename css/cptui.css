@@ -1,3 +1,7 @@
+.posttypesui .cptui-section:first-child, .taxonomiesui .cptui-section:first-child {
+  margin-top: 30px;
+}
+
 .cptui-table #excerpt {
   display: inline;
   height: 16px;
@@ -227,7 +231,7 @@ fieldset .cptui-help {
 .cptui-section fieldset {
   border: solid #cccccc 1px;
   display: block;
-  margin-top: 30px;
+  margin-bottom: 30px;
   padding: 10px;
   overflow: hidden;
 }

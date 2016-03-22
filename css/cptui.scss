@@ -1,3 +1,8 @@
+.posttypesui, .taxonomiesui {
+	.cptui-section:first-child {
+		margin-top: 30px;
+	}
+}
 .cptui-table {
 	#excerpt {
 		display: inline;
@@ -208,7 +213,7 @@
 	fieldset {
 		border: solid rgb(204, 204, 204) 1px;
 		display: block;
-		margin-top: 30px;
+		margin-bottom: 30px;
 		padding: 10px;
 		overflow: hidden;
 		.js &.toggledclosed {
