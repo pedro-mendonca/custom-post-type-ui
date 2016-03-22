@@ -239,6 +239,24 @@ function cptui_manage_post_types() {
 					}
 
 					echo $ui->get_td_end(); echo $ui->get_tr_end();
+
+					echo $ui->get_text_input( array(
+						'namearray' => 'cpt_custom_post_type',
+						'name'      => 'label',
+						'textvalue' => ( isset( $current['label'] ) ) ? esc_attr( $current['label'] ) : '',
+						'labeltext' => esc_html__( 'Plural Label', 'custom-post-type-ui' ),
+						'aftertext' => esc_html__( '(e.g. Movies)', 'custom-post-type-ui' ),
+						'helptext'  => esc_html__( 'Used for the post type admin menu item.', 'custom-post-type-ui' ),
+					) );
+
+					echo $ui->get_text_input( array(
+						'namearray' => 'cpt_custom_post_type',
+						'name'      => 'singular_label',
+						'textvalue' => ( isset( $current['singular_label'] ) ) ? esc_attr( $current['singular_label'] ) : '',
+						'labeltext' => esc_html__( 'Singular Label', 'custom-post-type-ui' ),
+						'aftertext' => esc_html__( '(e.g. Movie)', 'custom-post-type-ui' ),
+						'helptext'  => esc_html__( 'Used when a singular label is needed.', 'custom-post-type-ui' ),
+					) );
 				?>
 			</table>
 			<p class="submit">
@@ -303,24 +321,6 @@ function cptui_manage_post_types() {
 			?>
 			<table class="form-table cptui-table">
 				<?php
-
-					echo $ui->get_text_input( array(
-						'namearray' => 'cpt_custom_post_type',
-						'name'      => 'label',
-						'textvalue' => ( isset( $current['label'] ) ) ? esc_attr( $current['label'] ) : '',
-						'labeltext' => esc_html__( 'Plural Label', 'custom-post-type-ui' ),
-						'aftertext' => esc_html__( '(e.g. Movies)', 'custom-post-type-ui' ),
-						'helptext'  => esc_html__( 'Used for the post type admin menu item.', 'custom-post-type-ui' ),
-					) );
-
-					echo $ui->get_text_input( array(
-						'namearray' => 'cpt_custom_post_type',
-						'name'      => 'singular_label',
-						'textvalue' => ( isset( $current['singular_label'] ) ) ? esc_attr( $current['singular_label'] ) : '',
-						'labeltext' => esc_html__( 'Singular Label', 'custom-post-type-ui' ),
-						'aftertext' => esc_html__( '(e.g. Movie)', 'custom-post-type-ui' ),
-						'helptext'  => esc_html__( 'Used when a singular label is needed.', 'custom-post-type-ui' ),
-					) );
 
 					if ( isset( $current['description'] ) ) {
 						$current['description'] = stripslashes_deep( $current['description'] );
