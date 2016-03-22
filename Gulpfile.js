@@ -88,7 +88,7 @@ gulp.task('postcss', ['clean:styles'], function() {
  * https://www.npmjs.com/package/gulp-cssnano
  */
 gulp.task('cssnano', ['postcss'], function() {
-	return gulp.src('cptui.css')
+	return gulp.src('./css/cptui.css')
 	.pipe(plumber({ errorHandler: handleErrors }))
 	.pipe(cssnano({
 		safe: true // Use safe optimizations
