@@ -296,13 +296,9 @@ function cptui_manage_post_types() {
 					 */
 					?>
 					<input type="submit" class="button-primary" name="cpt_submit" value="<?php echo esc_attr( apply_filters( 'cptui_post_type_submit_add', __( 'Add Post Type', 'custom-post-type-ui' ) ) ); ?>" />
-				<?php } ?>
-					<p>
-						<a href="#" id="togglelabels" class="button-secondary"><?php esc_html_e( 'Edit additional labels', 'custom-post-type-ui' ); ?></a>
-						<a href="#" id="togglesettings" class="button-secondary"><?php esc_html_e( 'Edit settings', 'custom-post-type-ui' ); ?></a>
-					</p>
+				<?php }
 
-				<?php if ( ! empty( $current ) ) { ?>
+				if ( ! empty( $current ) ) { ?>
 					<input type="hidden" name="cpt_original" id="cpt_original" value="<?php esc_attr_e( $current['name'] ); ?>" />
 				<?php }
 
@@ -312,6 +308,9 @@ function cptui_manage_post_types() {
 			<?php echo $ui->get_fieldset_end(); ?>
 		</div>
 		<div class="cptui-section">
+			<p>
+				<a href="#" id="togglelabels" class="button-secondary"><?php esc_html_e( 'Edit additional labels', 'custom-post-type-ui' ); ?></a>
+			</p>
 			<?php
 				$fieldset_classes = ( 'edit' == $tab ) ? '' : 'toggledclosed';
 				echo $ui->get_fieldset_start( array( 'id' => 'labels_expand', 'classes' => array( $fieldset_classes ) ) );
@@ -546,6 +545,9 @@ function cptui_manage_post_types() {
 			<?php echo $ui->get_fieldset_end(); ?>
 		</div>
 		<div class="cptui-section">
+			<p>
+				<a href="#" id="togglesettings" class="button-secondary"><?php esc_html_e( 'Edit settings', 'custom-post-type-ui' ); ?></a>
+			</p>
 			<?php
 				$fieldset_classes = ( 'edit' == $tab ) ? '' : 'toggledclosed';
 				echo $ui->get_fieldset_start( array( 'id' => 'settings_expand', 'classes' => array( $fieldset_classes ), 'aria-expanded' => 'false' ) );
