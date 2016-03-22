@@ -140,5 +140,5 @@ gulp.task('watch', function () {
  */
 gulp.task('scripts', ['uglify']);
 gulp.task('styles', ['cssnano']);
-gulp.task('default', ['i18n', 'styles', 'scripts']);
-gulp.task('release', ['i18n', 'styles', 'scripts', 'docsgen']);
+gulp.task('default', ['styles', 'scripts']);
+gulp.task('release', ['styles', 'scripts', 'docsgen']);
