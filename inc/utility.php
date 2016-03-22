@@ -260,15 +260,18 @@ function cptui_get_taxonomy_data() {
  * @internal
  */
 function cptui_products_sidebar() {
-	$ads = wp_remote_get( 'https://webdevstudios.com/assets/wds.json' );
+	if ( false === ( $ads = get_transient( 'wds_promos' ) ) ) {
+		$ads = wp_remote_get( 'https://webdevstudios.com/assets/wds.json' );
 
-	if ( '200' == wp_remote_retrieve_response_code( $ads ) ) {
-		$ads = json_decode( wp_remote_retrieve_body( $ads ) );
+		if ( '200' == wp_remote_retrieve_response_code( $ads ) ) {
+			$ads = json_decode( wp_remote_retrieve_body( $ads ) );
+			set_transient( 'wds_promos', $ads, DAY_IN_SECONDS );
+		}
 	}
 
-	if ( !empty( $ads ) ) {
+	if ( ! empty( $ads ) ) {
 		echo '<div class="wdspromos">';
-		foreach( $ads as $ad ) {
+		foreach ( $ads as $ad ) {
 			printf(
 				'<a href="%s"><img src="%s" alt="%s"></a>',
 				$ad->url,
@@ -278,6 +281,7 @@ function cptui_products_sidebar() {
 		}
 		echo '</div>';
 	}
+
 }
 add_action( 'cptui_below_post_type_tab_menu', 'cptui_products_sidebar' );
 add_action( 'cptui_below_taxonomy_tab_menu', 'cptui_products_sidebar' );
