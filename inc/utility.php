@@ -100,22 +100,17 @@ function cptui_footer( $original = '' ) {
 
 	return sprintf(
 		__( '%s version %s by %s', 'custom-post-type-ui' ),
-		sprintf(
-			'<a target="_blank" href="https://wordpress.org/support/plugin/custom-post-type-ui">%s</a>',
-			__( 'Custom Post Type UI', 'custom-post-type-ui' )
-		),
+		__( 'Custom Post Type UI', 'custom-post-type-ui' ),
 		CPTUI_VERSION,
 		'<a href="https://webdevstudios.com" target="_blank">WebDevStudios</a>'
 	) . ' - ' .
 	sprintf(
-		'<a href="https://github.com/WebDevStudios/custom-post-type-ui/issues" target="_blank">%s</a>',
-		__( 'Please Report Bugs', 'custom-post-type-ui' )
-	) . ' ' .
+		'<a href="http://wordpress.org/support/plugin/custom-post-type-ui" target="_blank">%s</a>',
+		__( 'Support forums', 'custom-post-type-ui' )
+	) . ' - ' .
 	__( 'Follow on Twitter:', 'custom-post-type-ui' ) .
 	sprintf(
-		' %s &middot; %s &middot; %s',
-		'<a href="https://twitter.com/tw2113" target="_blank">Michael</a>',
-		'<a href="https://twitter.com/williamsba" target="_blank">Brad</a>',
+		' %s',
 		'<a href="https://twitter.com/webdevstudios" target="_blank">WebDevStudios</a>'
 	);
 }
