@@ -100,6 +100,10 @@ class cptui_admin_ui {
 			$fieldset .= ' ' . $classes;
 		}
 
+		if ( !empty( $args['aria-expanded'] ) ) {
+			$fieldset .= ' aria-expanded="' . $args['aria-expanded'] . '"';
+		}
+
 		$fieldset .= ' tabindex="0">';
 
 		return $fieldset;
