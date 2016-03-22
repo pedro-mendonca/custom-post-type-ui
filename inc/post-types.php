@@ -899,7 +899,7 @@ function cptui_manage_post_types() {
 				echo $ui->get_check_input( array(
 					'checkvalue'    => 'excerpt',
 					'checked'       => ( !empty( $current['supports'] ) && is_array( $current['supports'] ) && in_array( 'excerpt', $current['supports'] ) ) ? 'true' : 'false',
-					'name'          => 'excerpt',
+					'name'          => 'excerpts',
 					'namearray'     => 'cpt_supports',
 					'textvalue'     => 'excerpt',
 					'labeltext'     => __( 'Excerpt' , 'custom-post-type-ui' ),
