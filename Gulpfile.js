@@ -64,17 +64,14 @@ gulp.task('docsgen', shell.task([
 gulp.task('postcss', ['clean:styles'], function() {
 	return gulp.src('css/*.scss', paths.css)
 
-	// Deal with errors.
 	.pipe(plumber({ errorHandler: handleErrors }))
 
 	// Compile Sass using LibSass.
 	.pipe(sass({
-		includePaths: [],
 		errLogToConsole: true,
 		outputStyle: 'expanded' // Options: nested, expanded, compact, compressed
 	}))
 
-	// Parse with PostCSS plugins.
 	.pipe(postcss([
 		autoprefixer({
 			browsers: ['last 2 version']
