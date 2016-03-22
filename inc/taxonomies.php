@@ -343,12 +343,8 @@ function cptui_manage_taxonomies() {
 
 				<?php if ( ! empty( $current ) ) { ?>
 					<input type="hidden" name="tax_original" id="tax_original" value="<?php echo $current['name']; ?>" />
-				<?php } ?>
-				<p>
-					<a href = "#" id = "togglelabels" class="button-secondary" ><?php esc_html_e( 'Edit additional labels', 'custom-post-type-ui' ); ?></a>
-					<a href="#" id="togglesettings" class="button-secondary"><?php esc_html_e( 'Edit settings', 'custom-post-type-ui' ); ?></a>
-				</p>
-				<?php
+				<?php }
+
 				// Used to check and see if we should prevent duplicate slugs ?>
 				<input type="hidden" name="cpt_tax_status" id="cpt_tax_status" value="<?php echo $tab; ?>" />
 			</p>
@@ -356,6 +352,9 @@ function cptui_manage_taxonomies() {
 			echo $ui->get_fieldset_end(); ?>
 		</div>
 		<div class="cptui-section">
+			<p>
+				<a href="#" id="togglelabels" class="button-secondary"><?php esc_html_e( 'Edit additional labels', 'custom-post-type-ui' ); ?></a>
+			</p>
 			<?php
 			$fieldset_classes = ( 'edit' == $tab ) ? '' : 'toggledclosed';
 			echo $ui->get_fieldset_start( array( 'id' => 'labels_expand', 'classes' => array( $fieldset_classes ) ) );
@@ -546,6 +545,9 @@ function cptui_manage_taxonomies() {
 		</div>
 
 		<div class="cptui-section">
+			<p>
+				<a href="#" id="togglesettings" class="button-secondary"><?php esc_html_e( 'Edit settings', 'custom-post-type-ui' ); ?></a>
+			</p>
 			<?php
 			$fieldset_classes = ( 'edit' == $tab ) ? '' : 'toggledclosed';
 			echo $ui->get_fieldset_start( array( 'id' => 'settings_expand', 'classes' => array( $fieldset_classes ), 'aria-expanded' => 'false' ) );
