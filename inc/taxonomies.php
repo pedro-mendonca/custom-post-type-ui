@@ -345,7 +345,7 @@ function cptui_manage_taxonomies() {
 					<input type="hidden" name="tax_original" id="tax_original" value="<?php echo $current['name']; ?>" />
 				<?php } ?>
 				<p>
-					<a href = "#" id = "togglelabels" class="button-secondary" ><?php esc_html_e( 'Edit labels', 'custom-post-type-ui' ); ?></a>
+					<a href = "#" id = "togglelabels" class="button-secondary" ><?php esc_html_e( 'Edit additional labels', 'custom-post-type-ui' ); ?></a>
 					<a href="#" id="togglesettings" class="button-secondary"><?php esc_html_e( 'Edit settings', 'custom-post-type-ui' ); ?></a>
 				</p>
 				<?php
@@ -360,7 +360,7 @@ function cptui_manage_taxonomies() {
 			$fieldset_classes = ( 'edit' == $tab ) ? '' : 'toggledclosed';
 			echo $ui->get_fieldset_start( array( 'id' => 'labels_expand', 'classes' => array( $fieldset_classes ) ) );
 			echo $ui->get_legend_start();
-			esc_html_e( 'Labels', 'custom-post-type-ui' );
+			esc_html_e( 'Additional labels', 'custom-post-type-ui' );
 			echo $ui->get_legend_end();
 			?>
 			<table class="form-table cptui-table">
