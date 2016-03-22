@@ -260,20 +260,24 @@ function cptui_get_taxonomy_data() {
  * @internal
  */
 function cptui_products_sidebar() {
-	echo '<div class="wdspromos">';
-	printf(
-		'<a href="%s"><img src="%s" alt="%s"></a>',
-		'https://apppresser.com/?utm_source=pluginize&utm_medium=plugin&utm_campaign=cptui',
-		plugin_dir_url( dirname( __FILE__ ) ) . 'images/apppresser.png',
-		__( 'AppPresser product ad', 'custom-post-type-ui' )
-	);
-	printf(
-		'<a href="%s"><img src="%s" alt="%s"></a>',
-		'https://maintainn.com/?utm_source=Pluginize&utm_medium=Plugin-Sidebar&utm_campaign=CPTUI',
-		plugin_dir_url( dirname( __FILE__ ) ) . 'images/maintainn.png',
-		__( 'Maintainn product ad', 'custom-post-type-ui' )
-	);
-	echo '</div>';
+	$ads = wp_remote_get( 'https://webdevstudios.com/assets/wds.json' );
+
+	if ( '200' == wp_remote_retrieve_response_code( $ads ) ) {
+		$ads = json_decode( wp_remote_retrieve_body( $ads ) );
+	}
+
+	if ( !empty( $ads ) ) {
+		echo '<div class="wdspromos">';
+		foreach( $ads as $ad ) {
+			printf(
+				'<a href="%s"><img src="%s" alt="%s"></a>',
+				$ad->url,
+				$ad->image,
+				$ad->text
+			);
+		}
+		echo '</div>';
+	}
 }
 add_action( 'cptui_below_post_type_tab_menu', 'cptui_products_sidebar' );
 add_action( 'cptui_below_taxonomy_tab_menu', 'cptui_products_sidebar' );
