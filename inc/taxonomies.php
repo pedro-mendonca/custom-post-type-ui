@@ -280,6 +280,26 @@ function cptui_manage_taxonomies() {
 					}
 
 					echo $ui->get_fieldset_end() . $ui->get_td_end() . $ui->get_tr_end();
+
+					echo $ui->get_text_input( array(
+						'namearray' => 'cpt_custom_tax',
+						'name'      => 'label',
+						'textvalue' => ( isset( $current['label'] ) ) ? esc_attr( $current['label'] ) : '',
+						'aftertext' => __( '(e.g. Actors)', 'custom-post-type-ui' ),
+						'labeltext' => __( 'Plural Label', 'custom-post-type-ui' ),
+						'helptext'  => esc_attr__( 'Used for the taxonomy admin menu item.', 'custom-post-type-ui' ),
+						'required'  => true
+					) );
+
+					echo $ui->get_text_input( array(
+						'namearray' => 'cpt_custom_tax',
+						'name'      => 'singular_label',
+						'textvalue' => ( isset( $current['singular_label'] ) ) ? esc_attr( $current['singular_label'] ) : '',
+						'aftertext' => __( '(e.g. Actor)', 'custom-post-type-ui' ),
+						'labeltext' => __( 'Singular Label', 'custom-post-type-ui' ),
+						'helptext'  => esc_attr__( 'Used when a singular label is needed.', 'custom-post-type-ui' ),
+						'required'  => true
+					) );
 			?>
 			</table>
 			<p class="submit">
@@ -344,25 +364,8 @@ function cptui_manage_taxonomies() {
 			echo $ui->get_legend_end();
 			?>
 			<table class="form-table cptui-table">
+
 				<?php
-					echo $ui->get_text_input( array(
-						'namearray'     => 'cpt_custom_tax',
-						'name'          => 'label',
-						'textvalue'     => ( isset( $current['label'] ) ) ? esc_attr( $current['label'] ) : '',
-						'aftertext'     => __( '(e.g. Actors)', 'custom-post-type-ui' ),
-						'labeltext'     => __( 'Plural Label', 'custom-post-type-ui' ),
-						'helptext'      => esc_attr__( 'Used for the taxonomy admin menu item.', 'custom-post-type-ui'),
-					) );
-
-					echo $ui->get_text_input( array(
-						'namearray'     => 'cpt_custom_tax',
-						'name'          => 'singular_label',
-						'textvalue'     => ( isset( $current['singular_label'] ) ) ? esc_attr( $current['singular_label'] ) : '',
-						'aftertext'     => __( '(e.g. Actor)', 'custom-post-type-ui' ),
-						'labeltext'     => __( 'Singular Label', 'custom-post-type-ui' ),
-						'helptext'      => esc_attr__( 'Used when a singular label is needed.', 'custom-post-type-ui'),
-					) );
-
 					if ( isset( $current['description'] ) ) {
 						$current['description'] = stripslashes_deep( $current['description'] );
 					}
