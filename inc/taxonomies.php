@@ -549,8 +549,8 @@ function cptui_manage_taxonomies() {
 				<a href="#" id="togglesettings" class="button-secondary"><?php esc_html_e( 'Edit settings', 'custom-post-type-ui' ); ?></a>
 			</p>
 			<?php
-			$fieldset_classes = ( 'edit' == $tab ) ? '' : 'toggledclosed';
-			echo $ui->get_fieldset_start( array( 'id' => 'settings_expand', 'classes' => array( $fieldset_classes ), 'aria-expanded' => 'false' ) );
+			$fieldset_classes = '';
+			echo $ui->get_fieldset_start( array( 'id' => 'settings_expand', 'classes' => array( $fieldset_classes ) ) );
 			echo $ui->get_legend_start();
 			esc_html_e( 'Settings', 'custom-post-type-ui' );
 			echo $ui->get_legend_end();
