@@ -1204,7 +1204,8 @@ function cptui_get_current_post_type( $post_type_deleted = false ) {
  */
 function cptui_delete_post_type( $data = array() ) {
 
-	if ( is_string( $data ) && post_type_exists( $data ) ) {
+	// Pass double data into last function despite matching values.
+	if ( is_string( $data ) && cptui_get_post_type_exists( $data, $data ) ) {
 		$data = array(
 			'cpt_custom_post_type' => array(
 				'name' => $data
@@ -1212,7 +1213,7 @@ function cptui_delete_post_type( $data = array() ) {
 		);
 	}
 
-	if ( empty( $data['cpt_custom_post_type']['name'] ) || ! post_type_exists( $data['cpt_custom_post_type']['name'] ) ) {
+	if ( empty( $data['cpt_custom_post_type']['name'] ) || ! cptui_get_post_type_exists( $data['cpt_custom_post_type']['name'], $data ) ) {
 		return cptui_admin_notices( 'error', '', false, __( 'Please provide a post type to delete', 'custom-post-type-ui' ) );
 	}
 
