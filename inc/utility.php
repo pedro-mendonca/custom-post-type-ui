@@ -122,6 +122,11 @@ add_filter( 'admin_footer_text', 'cptui_footer' );
  * @since 1.3.0
  */
 function cptui_flush_rewrite_rules() {
+
+	if ( defined( 'DOING_AJAX' ) && DOING_AJAX ) {
+		return;
+	}
+
 	/*
 	 * Wise men say that you should not do flush_rewrite_rules on init or admin_int. Due to the nature of our plugin
 	 * and how new post types or taxonomies can suddenly be introduced, we need to...potentially. For this,

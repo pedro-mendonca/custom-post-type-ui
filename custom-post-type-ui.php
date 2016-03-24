@@ -576,6 +576,10 @@ function cptui_settings_tab_menu( $page = 'post_types' ) {
  */
 function cptui_convert_settings() {
 
+	if ( defined( 'DOING_AJAX' ) && DOING_AJAX ) {
+		return;
+	}
+
 	$retval = '';
 
 	if ( false === get_option( 'cptui_post_types' ) && ( $post_types = get_option( 'cpt_custom_post_types' ) ) ) {
