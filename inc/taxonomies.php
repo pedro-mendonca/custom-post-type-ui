@@ -259,7 +259,17 @@ function cptui_manage_taxonomies() {
 						$args = array( 'public' => true );
 					}
 					$output = 'objects'; // Or objects.
-					$post_types = get_post_types( $args, $output );
+
+					/**
+					 * Filters the results returned to display for available post types for taxonomy.
+					 *
+					 * @since 1.3.0
+					 *
+					 * @param array  $value  Array of post type objects.
+					 * @param array  $args   Array of arguments for the post type query.
+					 * @param string $output The output type we want for the results.
+					 */
+					$post_types = apply_filters( 'cptui_get_post_types_for_taxonomies', get_post_types( $args, $output ), $args, $output );
 
 					foreach ( $post_types as $post_type ) {
 						$core_label = ( in_array( $post_type->name, array(
