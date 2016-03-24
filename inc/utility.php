@@ -251,6 +251,28 @@ function cptui_get_taxonomy_data() {
 }
 
 /**
+ * Checks if a post type is already registered.
+ *
+ * @since 1.3.0
+ *
+ * @param string       $slug Post type slug to check
+ * @param array|string $data Post type data being utilized.
+ * @return mixed|void
+ */
+function cptui_get_post_type_exists( $slug = '', $data = array() ) {
+
+	/**
+	 * Filters the boolean value for if a post type exists for 3rd parties.
+	 *
+	 * @since 1.3.0
+	 *
+	 * @param string       $slug Post type slug to check.
+	 * @param array|string $data Post type data being utilized.
+	 */
+	return apply_filters( 'cptui_get_post_type_exists', post_type_exists( $slug ), $data );
+}
+
+/**
  * Displays WebDevStudios products in a sidebar on the add/edit screens for post types and taxonomies.
  *
  * We hope you don't mind.
