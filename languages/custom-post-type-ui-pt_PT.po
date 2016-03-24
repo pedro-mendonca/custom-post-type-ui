@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Custom Post Type UI\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/plugins/custom-post-type-ui\n"
 "POT-Creation-Date: 2016-03-23 01:37+0000\n"
-"PO-Revision-Date: 2016-03-23 01:37+0000\n"
+"PO-Revision-Date: 2016-03-24 15:50+0000\n"
 "Last-Translator: Pedro Mendonça <ped.gaspar@gmail.com>\n"
 "Language-Team: WebDevStudios <contact@webdevstudios.com>\n"
 "Language: pt_PT\n"
@@ -957,7 +957,7 @@ msgstr "(p. ex. Inserir no filme)"
 
 #: inc/post-types.php:509
 msgid "Uploaded to this Item"
-msgstr "Carregado para este item"
+msgstr "Carregado neste item"
 
 #: inc/post-types.php:510
 msgid ""
