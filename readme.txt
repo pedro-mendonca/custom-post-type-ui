@@ -47,11 +47,15 @@ All official development on this plugin is on GitHub. Version bumps will still b
 * Added: Taxonomy slug update ability with preserved term association.
 * Added: Title, Editor, and Featured Image now checked by default for new post types.
 * Added: "Show in Quick Edit" taxonomy parameter available in WP 4.2
+* Added: Promo spots on add/edit screens for other products from WebDevStudios.
 * Fixed: Need to visit permalinks page to flush rewrite rules after creating new post type or taxonomy.
 * Fixed: Missing REST API based parameters in "Get Code" output.
 * Updated: Increased accessibility coverage.
 * Updated: Revised how tabs are added to pages so 3rd party developers can add their own tabs.
 * Updated: Improved string consistency in our UI helper notes. Props @GaryJ
+* Updated: Tested on WordPress 4.5
+* Updated: Cleaned up admin footer area for social links.
+* Updated: Moved all localization work to WordPress.org Translation packs
 
 = 1.2.4 =
 * Added: new CPTUI_VERSION constant to match naming of other current constants.
@@ -204,11 +208,15 @@ All official development on this plugin is on GitHub. Version bumps will still b
 * Added: Taxonomy slug update ability with preserved term association.
 * Added: Title, Editor, and Featured Image now checked by default for new post types.
 * Added: "Show in Quick Edit" taxonomy parameter available in WP 4.2
+* Added: Promo spots on add/edit screens for other products from WebDevStudios.
 * Fixed: Need to visit permalinks page to flush rewrite rules after creating new post type or taxonomy.
 * Fixed: Missing REST API based parameters in "Get Code" output.
 * Updated: Increased accessibility coverage.
 * Updated: Revised how tabs are added to pages so 3rd party developers can add their own tabs.
 * Updated: Improved string consistency in our UI helper notes. Props @GaryJ
+* Updated: Tested on WordPress 4.5
+* Updated: Cleaned up admin footer area for social links.
+* Updated: Moved all localization work to WordPress.org Translation packs
 
 = 1.2.4 =
 * Added: new CPTUI_VERSION constant to match naming of other current constants.
