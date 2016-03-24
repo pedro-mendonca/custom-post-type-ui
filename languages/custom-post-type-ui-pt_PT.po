@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Custom Post Type UI\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/plugins/custom-post-type-ui\n"
 "POT-Creation-Date: 2016-03-23 01:37+0000\n"
-"PO-Revision-Date: 2016-03-24 15:57+0000\n"
+"PO-Revision-Date: 2016-03-24 19:56+0000\n"
 "Last-Translator: Pedro Mendonça <ped.gaspar@gmail.com>\n"
 "Language-Team: WebDevStudios <contact@webdevstudios.com>\n"
 "Language: pt_PT\n"
@@ -325,7 +325,7 @@ msgstr "Professional WordPress<br />Plugin Development"
 
 #: inc/about.php:114
 msgid "Professional WordPress Plugin Development book cover."
-msgstr "Capa do livro Professional WordPress Pluing Development"
+msgstr "Capa do livro Professional WordPress Plugin Development."
 
 #: inc/about.php:117
 msgid "Highest rated WordPress development book on Amazon!"
