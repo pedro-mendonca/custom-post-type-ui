@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Custom Post Type UI\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/plugins/custom-post-type-ui\n"
 "POT-Creation-Date: 2016-10-07 13:00+0100\n"
-"PO-Revision-Date: 2016-10-07 14:56+0100\n"
+"PO-Revision-Date: 2016-10-07 16:23+0100\n"
 "Last-Translator: Pedro Mendonça <ped.gaspar@gmail.com>\n"
 "Language-Team: WebDevStudios <contact@webdevstudios.com>\n"
 "Language: pt_PT\n"
@@ -548,7 +548,6 @@ msgid "Single Posts file name examples."
 msgstr "Exemplos de nomes de ficheiros para artigos únicos."
 
 #: inc/listings.php:183
-#, fuzzy
 msgid "*Replace \"post_slug\" with the slug of the actual post slug."
 msgstr "*Substituir \"post_slug\" pela slug do conteúdo."
 
@@ -570,7 +569,6 @@ msgid "Archives"
 msgstr "Arquivo"
 
 #: inc/listings.php:343
-#, fuzzy
 msgid "*Replace \"term_slug\" with the slug of the actual taxonomy term."
 msgstr "*Substituir \"term_slug\" pela slug do termo de taxonomia."
 
@@ -856,7 +854,7 @@ msgstr "Superior"
 
 #: inc/post-types.php:443
 msgid "Used for hierarchical types that need a colon."
-msgstr ""
+msgstr "Utilizado para tipos hierárquicos que precisam de dois pontos."
 
 #: inc/post-types.php:447
 msgid "(e.g. Parent Movie:)"
@@ -1253,12 +1251,16 @@ msgid ""
 "(default: true) Whether or not to show the post type in the admin menu and "
 "where to show that menu."
 msgstr ""
+"(por omissão: verdadeiro) Mostrar o tipo de conteúdo no menu de "
+"administração e onde deverá ser mostrado."
 
 #: inc/post-types.php:835
 msgid ""
 "The top-level admin menu page file name for which the post type should be in "
 "the sub menu of."
 msgstr ""
+"O nome do ficheiro da página de administração de nível de topo, do qual este "
+"tipo de conteúdo deverá ser submenu."
 
 #: inc/post-types.php:841
 msgid "Menu Icon"
@@ -1449,7 +1451,6 @@ msgid "Are these ad spots tracking my personal information in any way?"
 msgstr "Estes anúncios rastreiam alguma da minha informação pessoal?"
 
 #: inc/support.php:100
-#, fuzzy
 msgid ""
 "No, there is no data being sent out from your site with these. The only way "
 "anything is tracked is via UTM parameters for WebDevStudios's analytics so "
@@ -1457,7 +1458,9 @@ msgid ""
 "if you actually click on an ad spot."
 msgstr ""
 "Não, não há qualquer envio de dados do seu site. O único modo de alguma "
-"coisa ser rastreada é via parâmetros UTM ..........."
+"coisa ser rastreada é via parâmetros UTM (localização) para análise da "
+"WebDevStudios para termos estatísticas da origem do tráfego. Estes dados "
+"apenas serão rastreados se clicar num anúncio."
 
 #: inc/support.php:104
 msgid ""
@@ -1614,6 +1617,12 @@ msgid ""
 "If you have set the post type to have archives, the archive url should be "
 "something like \"http://www.mysite.com/post-type-slug\""
 msgstr ""
+"Encorajamos a utilizar o %s para mostrar facilmente conteúdos de tipo "
+"personalizado onde quer que utilize um shortcode. Se preferir gerir por si, "
+"precisará de utilizar a classe %s para gerir a sua exibição em localizações "
+"personalizadas. Se definiu o seu tipo de conteúdo para ter arquivo, o URL do "
+"arquivo deverá ser algo como \"http://www.omeusite.com/slug-do-tipo-de-"
+"conteudo\""
 
 #: inc/support.php:181
 msgid ""
@@ -1766,6 +1775,8 @@ msgstr "Anexar ao tipo de conteúdo"
 msgid ""
 "Add support for available registered post types. At least one is required."
 msgstr ""
+"Adiciona suporte para tipos de conteúdo registados disponíveis. Pelo menos "
+"um é obrigatório."
 
 #: inc/taxonomies.php:338 inc/taxonomies.php:873
 msgid "Save Taxonomy"
@@ -1875,7 +1886,7 @@ msgstr "(p. ex. Actor superior:)"
 
 #: inc/taxonomies.php:477
 msgid "Parent Item Colon"
-msgstr "Item superior com pontuação"
+msgstr "Item superior com dois pontos"
 
 #: inc/taxonomies.php:485
 msgid "(e.g. Search Actors)"
@@ -1991,6 +2002,8 @@ msgstr "Mostrar no menu"
 msgid ""
 "(default: value of show_ui) Whether to show the taxonomy in the admin menu."
 msgstr ""
+"(por omissão: valor de \"Mostrar interface do utilizador\") Mostrar a "
+"taxonomia no menu de administração."
 
 #: inc/taxonomies.php:674
 msgid "Show in nav menus"
@@ -2001,6 +2014,8 @@ msgid ""
 "(default: value of public) Whether to make the taxonomy available for "
 "selection in navigation menus."
 msgstr ""
+"(por omissão: valor de \"Público\") Disponibilizar a taxonomia para "
+"seleccção nos menus de navegação."
 
 #: inc/taxonomies.php:695
 msgid "(default: true) Sets the query_var key for this taxonomy."
