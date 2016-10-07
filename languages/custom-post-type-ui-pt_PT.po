@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Custom Post Type UI\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/plugins/custom-post-type-ui\n"
 "POT-Creation-Date: 2016-08-23 23:12+0100\n"
-"PO-Revision-Date: 2016-08-24 22:18+0100\n"
+"PO-Revision-Date: 2016-08-28 21:34+0100\n"
 "Last-Translator: Pedro Mendonça <ped.gaspar@gmail.com>\n"
 "Language-Team: WebDevStudios <contact@webdevstudios.com>\n"
 "Language: pt_PT\n"
@@ -520,7 +520,7 @@ msgstr "Hierarquia dos modelos"
 
 #: inc/listings.php:116 inc/listings.php:294
 msgid "Get code"
-msgstr ""
+msgstr "Obter código"
 
 #: inc/listings.php:121
 msgid "View frontend archive"
@@ -602,7 +602,7 @@ msgstr "Ver tipos de conteúdo"
 
 #: inc/post-types.php:98
 msgid "Import/Export Post Types"
-msgstr ""
+msgstr "Importar/Exportar tipos de conteúdo"
 
 #: inc/post-types.php:168 inc/taxonomies.php:170
 msgid "Select: "
@@ -851,7 +851,7 @@ msgstr ""
 
 #: inc/post-types.php:447
 msgid "(e.g. Parent Movie:)"
-msgstr ""
+msgstr "(p. ex. Filme superior:)"
 
 #: inc/post-types.php:451 inc/post-types.php:909
 msgid "Featured Image"
@@ -1419,7 +1419,7 @@ msgstr ""
 
 #: inc/support.php:87
 msgid "How can I remove the ads that suddenly started showing up?"
-msgstr ""
+msgstr "Como posso remover os anúncios que começaram a aparecer?"
 
 #: inc/support.php:90
 #, php-format
@@ -1703,7 +1703,7 @@ msgstr "Ver taxonomias"
 
 #: inc/taxonomies.php:98
 msgid "Import/Export Taxonomies"
-msgstr ""
+msgstr "Importar/Exportar taxonomias"
 
 #: inc/taxonomies.php:212
 msgid "Taxonomy Slug"
@@ -2099,11 +2099,11 @@ msgstr "Remover estes anúncios?"
 
 #: inc/utility.php:336
 msgid "Get email updates from pluginize.com about Custom Post Type UI"
-msgstr ""
+msgstr "Receber emails de pluginize.com sobre o Custom Post Type UI"
 
 #: inc/utility.php:478
 msgid "Object"
-msgstr ""
+msgstr "Objecto"
 
 #: inc/utility.php:580
 #, php-format
