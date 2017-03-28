@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Custom Post Type UI\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/plugins/custom-post-type-ui\n"
 "POT-Creation-Date: 2017-03-10 15:09+0000\n"
-"PO-Revision-Date: 2017-03-10 15:15+0000\n"
+"PO-Revision-Date: 2017-03-28 14:19+0100\n"
 "Last-Translator: Pedro Mendonça <ped.gaspar@gmail.com>\n"
 "Language-Team: WebDevStudios <contact@webdevstudios.com>\n"
 "Language: pt_PT\n"
@@ -370,7 +370,7 @@ msgstr "Total de taxonomias registadas pelo CPTUI: %d"
 
 #: inc/listings.php:250
 msgid "Taxonomy"
-msgstr "Taxionomia"
+msgstr "Taxonomia"
 
 #: inc/listings.php:368
 msgid "*Replace \"term_slug\" with the slug of the actual taxonomy term."
